@@ -13,4 +13,14 @@ class App {
 fun main() {
     println(App().greeting)
     println("Jose Luis Hurtado Balcazar")
+    val pi=3.1416
+    var dinero=10
+    val nombre="Jose"
+    val boolean=true
+    val numeroLargo = 3
+    val double = 2.7182
+    val p1=1
+    val p2=2
+    val p3=p1-p2
+    println(p3)
 }
