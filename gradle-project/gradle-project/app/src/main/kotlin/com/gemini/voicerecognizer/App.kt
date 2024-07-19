@@ -33,8 +33,15 @@ fun main() {
     }
     
     when (nombre){
-        "Jose" -> println("Luis")
-        "Luis" -> println("Migul")
+        "Jose"->println("Luis")
+        "Luis"->println("Migul")
+    }
+
+    val code=200
+    when (code){
+        in 200..299->println("ok")
+        in 400..500->println("Not ok")
+        else->println("Bad")
     }
 
 }
