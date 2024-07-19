@@ -24,4 +24,9 @@ fun main() {
     val p3=p1-p2
     println(p3)
     println("Uso de $: $dinero")
+    if (nombre.isNotEmpty()){
+        println("Nombre tiene una longitud de ${nombre.length}.")
+    }else{
+        println("Error.")
+    }
 }
