@@ -26,7 +26,15 @@ fun main() {
     println("Uso de $: $dinero")
     if (nombre.isNotEmpty()){
         println("Nombre tiene una longitud de ${nombre.length}.")
+    }else if(nombre.isEmpty()){
+        println("OK!")    
     }else{
         println("Error.")
     }
+    
+    when (nombre){
+        "Jose" -> println("Luis")
+        "Luis" -> println("Migul")
+    }
+
 }
