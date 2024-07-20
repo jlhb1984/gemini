@@ -180,5 +180,18 @@ fun main() {
     edad_superh2.remove(key:"Titania")
     println("Superh2 $edad_superh2")
      */
+
+    val vocal_repe=setOf("a","e","i","o","u","a","e","i","o","u")
+    println("Sets no permite tener elementos repetidos $vocal_repe")
+
+    val nums=mutableSetOf(1,2,3,4)
+    println("nums $nums")
+    nums.add(5)
+    println("nums $nums")
+    nums.remove(4)
+    println("nums $nums")
+
+    val val_set=nums.firstOrNull{num3->num3>2}
+    println("val_set: $val_set")     
     
 }
