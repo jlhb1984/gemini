@@ -207,8 +207,17 @@ fun main() {
     val saludos=listOf("hello","hola","chao")
     val longsal=saludos.map(my_lambda)
     println("longsal $longsal")
-    
+
+    val largo_valor=super_funcion(valor_inicial="Hola",block={valor->valor.length})
+    println("largo_valor: $largo_valor")
+
+    /*
+    val lambda=fun_incept("Enrrique")
+    val val_lambda=String=lambda()
+    println(val_lambda)
+    */
 }
+
 
 fun randomCase(frase: String): String{
     val numrand=0..99
@@ -226,4 +235,14 @@ fun impfra(frase : String): Unit{
 
 fun imprimir_nombre(nombre: String, s_nombre: String="",apellido: String){
     println("Mi nombre es $nombre $s_nombre $apellido")
+}
+
+fun super_funcion(valor_inicial: String, block:(String)->Int):Int{
+    return block(valor_inicial)
+}
+
+fun fun_incept(nombre:String): ()->String{
+    return{
+        "Hola"
+    }
 }
