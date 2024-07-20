@@ -226,7 +226,38 @@ fun main() {
     nombre4?.let{
         valor->println("El nombre no es nulo, es $valor")
     }
-    
+
+    val colores=listOf("azul","amarillo","rojo")
+    with(colores){
+        println("Nuestros colores son $this")
+        println("Esta lista tiene una cantidad de colores de $size")
+    }
+
+    val moviles=mutableListOf("Google Pixel","Huawei","Redmi")
+    .run{
+        removeIf{movil->movil.contains("Huawei")}
+        this
+    }
+    println(moviles)
+
+    val moviles2=mutableListOf("Google Pixel","Huawei","Redmi")
+    .apply{
+        removeIf{movil->movil.contains("Huawei")}
+    }
+    println(moviles2)
+
+    val colores2=mutableListOf("azul","amarillo","rojo")
+    colores2?.apply{
+        println("Nuestros colores son $this")
+        println("Esta lista tiene una cantidad de colores de $size")
+    }
+
+     val moviles3=mutableListOf("Google Pixel","Huawei","Redmi")
+    .also{
+        lista->println("El valor de la lista es: $lista")
+    }.asReversed()
+    println(moviles3)
+
 
 }
 
