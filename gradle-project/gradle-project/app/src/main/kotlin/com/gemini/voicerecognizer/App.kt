@@ -216,6 +216,18 @@ fun main() {
     val val_lambda=String=lambda()
     println(val_lambda)
     */
+
+    var nombre4: String?=null
+    nombre4?.let{
+        valor->println("El nombre no es nulo, es $valor")
+    }
+
+    nombre4="Jose"
+    nombre4?.let{
+        valor->println("El nombre no es nulo, es $valor")
+    }
+    
+
 }
 
 
