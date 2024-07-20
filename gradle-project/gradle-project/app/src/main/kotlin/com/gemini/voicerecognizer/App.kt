@@ -44,4 +44,34 @@ fun main() {
         else->println("Bad")
     }
 
+    var contador=10
+    while (contador>0){
+        println("El valor de contador es $contador")
+        contador--
+    }
+
+    do{
+        println("Generando número aleatorio: ")    
+        var numeroaleatorio=(0..100).random()   
+        println("$numeroaleatorio")
+        numeroaleatorio--
+    }while (numeroaleatorio>50)
+
+    val lista_frutas=listOf("manzana","pera","frambuesa","durazno")
+    for (fruta in lista_frutas){
+        println("Hoy comeré $fruta")
+    }
+
+    val lista_frutas2=listOf("manzana","pera","frambuesa","durazno")
+    for (fruta2 in lista_frutas2){
+        println("Hoy comeré $fruta2")
+        lista_frutas2.forEach{fruta2->println("Hoy comeré nueva $fruta2")}
+    }
+
+    val caracteres_frutas=lista_frutas2.map{fruta2->fruta2.length}
+    println(caracteres_frutas)
+
+    val lista_filtrada=caracteres_frutas.filter{caracteres_frutas->caracteres_frutas>5}
+    println(lista_filtrada)
+
 }
