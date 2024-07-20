@@ -133,4 +133,20 @@ fun main() {
     /*Es recomendable usar listas en vez de arrays */
     println("Nuestro array como lista: ${my_array.toList()}")
 
+    var num_de_lot=listOf(11,22,43,56,78,66)
+    var num_sorted=num_de_lot.sorted()
+    println("num_de_lot ordenada: $num_sorted")
+    var num_de_lot2=listOf(11,22,43,56,78,66).sortedDescending()
+    println("num_de_lot2 ordenada descendente: $num_de_lot2")       
+    var num_sorted_by=num_de_lot2.sortedBy{num_de_lot2 -> num_de_lot2 <50}
+    println("num_dsortedBy: $num_sorted_by")    
+    var num_shuffled=num_de_lot2.shuffled()
+    println("num_de_lot2 shuffled: $num_shuffled")    
+    var num_reversed=num_de_lot.reversed()
+    println("num_de_lot: $num_de_lot")
+    println("num_de_lot reversed: $num_reversed")    
+    var men_num=num_de_lot.map{num_de_lot->"Num de lot: $num_de_lot"}
+    println("men_num: $men_num")    
+    var num_filt=num_de_lot2.filter{num_de_lot2->num_de_lot2>50}
+    println("num_de_lot2 filter: $num_filt")    
 }
