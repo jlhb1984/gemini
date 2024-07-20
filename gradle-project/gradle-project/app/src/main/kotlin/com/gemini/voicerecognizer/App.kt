@@ -148,5 +148,37 @@ fun main() {
     var men_num=num_de_lot.map{num_de_lot->"Num de lot: $num_de_lot"}
     println("men_num: $men_num")    
     var num_filt=num_de_lot2.filter{num_de_lot2->num_de_lot2>50}
-    println("num_de_lot2 filter: $num_filt")    
+    println("num_de_lot2 filter: $num_filt")
+
+    val edad_superh1=mapOf(
+        "Iron_man" to 35,
+        "Spiderman" to 23,
+        "CapitanA" to 99
+    )
+    println("Superh1 $edad_superh1")
+
+    val edad_superh2=mutableMapOf(
+        "DeadPool" to 35,
+        "Guepardo" to 23,
+        "Titania" to 99
+    )
+    println("Superh2 $edad_superh2")
+
+    edad_superh2.put("Ciclope",28)
+    println("Superh2 $edad_superh2")
+
+    edad_superh2["Storm"]=28
+    println("Superh2 $edad_superh2")
+
+    var edad_Titania=edad_superh2["Titania"]
+    println(edad_Titania)
+
+    println(edad_superh2.keys)
+    println(edad_superh2.values)
+    
+    /*
+    edad_superh2.remove(key:"Titania")
+    println("Superh2 $edad_superh2")
+     */
+    
 }
