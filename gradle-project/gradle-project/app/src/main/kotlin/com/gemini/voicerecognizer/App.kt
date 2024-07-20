@@ -200,6 +200,14 @@ fun main() {
 
     imprimir_nombre(nombre="Jose",apellido="Hurtado")   
     
+    val my_lambda:(String) -> Int = {valor->valor.length}
+    val lambda_ejecutada: Int=my_lambda("Hola Platzi")
+    print(lambda_ejecutada)
+    
+    val saludos=listOf("hello","hola","chao")
+    val longsal=saludos.map(my_lambda)
+    println("longsal $longsal")
+    
 }
 
 fun randomCase(frase: String): String{
