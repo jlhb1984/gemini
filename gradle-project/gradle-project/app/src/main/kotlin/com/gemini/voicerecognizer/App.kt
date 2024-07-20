@@ -196,7 +196,9 @@ fun main() {
 
     val fraseal="En Platzi nunca paramos de aprender"
     var frasealord=randomCase(fraseal)
-    println(frasealord)    
+    println(frasealord)
+
+    imprimir_nombre(nombre="Jose",apellido="Hurtado")   
     
 }
 
@@ -208,8 +210,12 @@ fun randomCase(frase: String): String{
     }else{
         return frase.toLowerCase()
     }
+}
 
 fun impfra(frase : String): Unit{
     println("Tu frase es: $frase")
 }
+
+fun imprimir_nombre(nombre: String, s_nombre: String="",apellido: String){
+    println("Mi nombre es $nombre $s_nombre $apellido")
 }
