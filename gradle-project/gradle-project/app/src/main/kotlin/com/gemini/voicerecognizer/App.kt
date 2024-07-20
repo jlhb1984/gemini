@@ -192,6 +192,24 @@ fun main() {
     println("nums $nums")
 
     val val_set=nums.firstOrNull{num3->num3>2}
-    println("val_set: $val_set")     
+    println("val_set: $val_set") 
+
+    val fraseal="En Platzi nunca paramos de aprender"
+    var frasealord=randomCase(fraseal)
+    println(frasealord)    
     
+}
+
+fun randomCase(frase: String): String{
+    val numrand=0..99
+    val resal=numrand.random()
+    if (resal.rem(2)==0){
+        return frase.toUpperCase()
+    }else{
+        return frase.toLowerCase()
+    }
+
+fun impfra(frase : String): Unit{
+    println("Tu frase es: $frase")
+}
 }
