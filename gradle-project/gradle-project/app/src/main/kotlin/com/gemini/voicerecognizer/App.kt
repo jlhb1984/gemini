@@ -13,12 +13,8 @@ class App {
 fun main() {
     println(App().greeting)
     println("Jose Luis Hurtado Balcazar")
-    val pi=3.1416
     var dinero=10
     val nombre="Jose"
-    val boolean=true
-    val numeroLargo = 3L
-    val double = 2.7182
     val p1=1
     val p2=2
     val p3=p1-p2
@@ -105,5 +101,36 @@ fun main() {
     var nombre3: String?=null
     val caracteres_nombre:Int=nombre3?.length ?:0
     println(caracteres_nombre)
+
+    val lista_nombres=listOf("Juan","Enrrique","Camilo")
+    println(lista_nombres)
+
+    val lista_vacia=mutableListOf<String>()
+    println(lista_vacia)
+
+    lista_vacia.add("Juan")
+    println("lista_vacia: $lista_vacia")
+
+    val valor_usando_get=lista_vacia.get(0)
+    println("valor_usando_get: $valor_usando_get")
+
+    val valor_usando_operador=lista_vacia[0]
+    println("valor_usando_operador: $valor_usando_operador")
+
+    val primer_valor: String?=lista_nombres.firstOrNull()
+    println("primer_valor: $primer_valor")
+
+    lista_vacia.removeAt(0)
+    println("lista_vacia: $lista_vacia")
+
+    lista_vacia.add("Enrrique")
+    lista_vacia.removeIf{caracteres->caracteres.length>3}
+    println("lista_vacia: $lista_vacia")
+
+    val my_array=arrayOf(1,2,3,4)
+    println("Nuestro array: $my_array")
+
+    /*Es recomendable usar listas en vez de arrays */
+    println("Nuestro array como lista: ${my_array.toList()}")
 
 }
