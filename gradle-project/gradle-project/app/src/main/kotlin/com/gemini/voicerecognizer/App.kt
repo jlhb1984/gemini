@@ -74,4 +74,36 @@ fun main() {
     val lista_filtrada=caracteres_frutas.filter{caracteres_frutas->caracteres_frutas>5}
     println(lista_filtrada)
 
+    println("!!: double bang.")
+
+    var nombre2 : String?=null
+    /*println(nombre?.length)
+    */
+
+    try{
+        nombre!!.length
+    }catch(excepcion:NullPointerException){
+        println("Ha ocurrido un error")
+    }finally{
+        println("Fialmente ha ocurrido un eroror... Cerrando aplicación")
+    }
+
+
+    try{
+        throw NullPointerException("Referencia nula")
+    }catch(excepcion:NullPointerException){
+        println("Ha ocurrido un error")
+    }finally{
+        println("Fialmente ha ocurrido un eroror... Cerrando aplicación")
+    }
+
+    val val1=10
+    val val2=0
+    val resultado : Int=try{val1/val2} catch (exception:Exception){0}
+    println(resultado)
+
+    var nombre3: String?=null
+    val caracteres_nombre:Int=nombre3?.length ?:0
+    println(caracteres_nombre)
+
 }
